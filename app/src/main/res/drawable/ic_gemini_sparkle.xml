@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- Gemini Main Sparkle Star -->
+    <path
+        android:fillColor="#8AB4F8"
+        android:pathData="M32,4 C32,19.46 19.46,32 4,32 C19.46,32 32,44.54 32,60 C32,44.54 44.54,32 60,32 C44.54,32 32,19.46 32,4 Z" />
+    <!-- Secondary Purple Sparkle Star -->
+    <path
+        android:fillColor="#C58AF9"
+        android:pathData="M52,6 C52,10.42 48.42,14 44,14 C48.42,14 52,17.58 52,22 C52,17.58 55.58,14 60,14 C55.58,14 52,10.42 52,6 Z" />
+</vector>

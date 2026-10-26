@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <!-- Top Touch Dismiss Area (Tap outside to close overlay) -->
+    <View
+        android:id="@+id/viewDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Floating Response Card -->
+    <LinearLayout
+        android:id="@+id/layoutResponseCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/bg_gemini_assistant_bubble"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Sparkle Logo"
+            android:src="@drawable/ic_gemini_sparkle" />
+
+        <TextView
+            android:id="@+id/tvOverlayResponse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingExtra="4dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="Kukki is listening..."
+            android:textColor="#F1F3F4"
+            android:textIsSelectable="true"
+            android:textSize="15.5sp" />
+
+    </LinearLayout>
+
+    <!-- Floating Gemini Bottom Capsule Bar -->
+    <LinearLayout
+        android:id="@+id/layoutCapsuleBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_gemini_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <!-- Left + Button -->
+        <ImageButton
+            android:id="@+id/btnOverlayAttach"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Attach"
+            android:padding="8dp"
+            android:src="@drawable/ic_add_plus" />
+
+        <!-- Center Audio Waveform Visualizer & Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvOverlayStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Listening... speak your request"
+                android:textColor="#8AB4F8"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Right Voice Mic Button -->
+        <ImageButton
+            android:id="@+id/btnOverlayMic"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_gemini_pill"
+            android:contentDescription="Microphone"
+            android:padding="9dp"
+            android:src="@drawable/ic_mic" />
+
+    </LinearLayout>
+
+</LinearLayout>
